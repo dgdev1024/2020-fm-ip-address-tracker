@@ -1,0 +1,48 @@
+@import "./global.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: $font-family-normal;
+  font-weight: $font-weight-normal;
+}
+
+html {
+  font-size: $font-size-normal;
+}
+
+.main {
+  height: 100vh;
+  min-height: 600px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0px auto;
+
+  @media #{$screen-medium} {
+    width: 90%;
+  }
+
+  @media #{$screen-large} {
+    width: 85%;
+  }
+
+  @media #{$screen-extra-large} {
+    width: 80%;
+  }
+}
+
+.text {
+  text-align: center;
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--error {
+    color: darkred;
+  }
+}

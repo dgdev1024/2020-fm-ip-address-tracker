@@ -26,10 +26,14 @@
   },
   "homepage": "https://github.com/dgdev1024/2020-fm-ip-address-tracker#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
   },
   "dependencies": {
+    "axios": "^0.20.0",
+    "leaflet": "^1.6.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-leaflet": "^2.7.0"
   }
 }

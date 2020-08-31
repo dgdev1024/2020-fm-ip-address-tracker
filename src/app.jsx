@@ -3,7 +3,10 @@
  * The application's top-level component.
  */
 
-import React from 'react';
+import React from "react";
+import Header from "./com/header";
+import LocationMap from "./com/location-map";
+import GeolocationProvider from "./ctx/geolocation";
 
 /**
  * @function InnerApp
@@ -11,7 +14,10 @@ import React from 'react';
  * HTML content itself.
  */
 const InnerApp = () => (
-  <main className="main"></main>
+  <main className="main">
+    <Header />
+    <LocationMap />
+  </main>
 );
 
 /**
@@ -20,7 +26,9 @@ const InnerApp = () => (
  * by our context providers.
  */
 const App = () => (
-  <InnerApp />
+  <GeolocationProvider>
+    <InnerApp />
+  </GeolocationProvider>
 );
 
 export default App;

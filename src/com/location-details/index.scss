@@ -1,0 +1,65 @@
+@import "../../global.scss";
+
+.location-details {
+  width: 100%;
+  max-width: 600px;
+  margin: 0px auto;
+  margin-top: 32px;
+  padding: 8px;
+  background-color: white;
+  border-radius: 12px;
+
+  &--with-response {
+    margin-bottom: -160px;
+  }
+
+  @media #{$screen-medium} {
+    max-width: none;
+
+    &--with-response {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
+      margin-bottom: -70px;
+    }
+  }
+}
+
+.location-detail {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid $color-dark-gray;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  @media #{$screen-medium} {
+    border-bottom: none;
+    border-right: 1px solid $color-dark-gray;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &-key {
+    padding-bottom: 4px;
+    font-size: 0.6rem;
+    font-weight: $font-weight-medium;
+    color: $color-very-dark-gray;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &-value {
+    font-size: 1.2em;
+    font-weight: $font-weight-bold;
+    color: black;
+  }
+}
+
+.map-marker {
+  position: relative;
+  z-index: 9999;
+}

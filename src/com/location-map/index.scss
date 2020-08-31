@@ -1,0 +1,12 @@
+@import "../../global.scss";
+
+.location-map {
+  height: 75%;
+  min-height: 400px;
+  position: relative;
+  z-index: -1;
+}
+
+.leaflet-container {
+  height: 100%;
+}
