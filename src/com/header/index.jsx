@@ -3,7 +3,7 @@
  * Presents the header and search bar at the top.
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LocationDetails from "../location-details";
 import { useGeolocationContext } from "../../ctx/geolocation";
 import Arrow from "../../img/icon-arrow.svg";
@@ -21,6 +21,10 @@ const Header = () => {
     response,
     queryGeolocation,
   } = useGeolocationContext();
+
+  useEffect(() => {
+    (async () => await queryGeolocation(""))();
+  }, []);
 
   const onSubmit = async (ev) => {
     ev.preventDefault();
